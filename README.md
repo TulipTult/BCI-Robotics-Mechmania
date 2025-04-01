@@ -22,9 +22,9 @@
 
 ## Development
 
--v1 - finsihed (template)
+- v1 - finsihed (template)
 
--v1.1a - unfinished
+- v1.1a - unfinished
 
 # Authors / Team
 - Lia Jung
