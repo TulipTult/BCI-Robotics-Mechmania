@@ -16,11 +16,11 @@
   <a href="#license">License</a>
 </p>
 
-#Sumo Bot 
+# Sumo Bot 
 
-#Soccer Bot
+# Soccer Bot
 
-#How It Works
+# How It Works
 
 ## Development
 
