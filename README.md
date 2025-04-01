@@ -17,11 +17,11 @@
 </p>
 
 # Sumo-Bot 
-
+  WIP
 # Soccer-Bot
-
+  WIP
 # How-It-Works
-
+  
 ## Development
 
 - v1 - finsihed (template)
