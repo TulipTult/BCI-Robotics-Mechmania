@@ -9,7 +9,7 @@ BCI Robotics Repo for Sumo and Soccer Robot
 Lia Jung
 Chitumi
 Mahir
-[https://github.com/TulipTult](Ashton Grant)
+[Ashton Grant](https://github.com/TulipTult)
 Hasaan Malik
 Louise
 Sravya
