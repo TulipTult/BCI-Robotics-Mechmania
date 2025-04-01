@@ -1,7 +1,7 @@
 # BCI-Robotics-Mechmania
 
 <p align="center">
-  <img src="/BCIRoboticsIcon.PNG" alt="Pinocchio Logo" width="300" height="300">
+  <img src="/BCIRoboticsIcon.PNG" alt="Pinocchio Logo" width="600" height="300">
 </p>
 
 <p align="center">
