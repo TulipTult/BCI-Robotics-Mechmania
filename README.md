@@ -9,16 +9,16 @@
 </p>
 
 <p align="center">
-  <a href="##Sumo Bot">Sumo Bot</a> •
+  <a href="##Sumo-Bot">Sumo Bot</a> •
   <a href="##Soccer Bot">Soccer Bot</a> •
   <a href="#How It Works">How It Works</a> •
   <a href="#development">Development</a> •
   <a href="#license">License</a>
 </p>
 
-# Sumo Bot 
+#Sumo Bot 
 
-# Soccer Bot
+#Soccer Bot
 
 #How It Works
 
