@@ -16,11 +16,15 @@
   <a href="#license">License</a>
 </p>
 
-## Sumo Bot 
+# Sumo Bot 
 
-## Soccer Bot
+# Soccer Bot
 
-# Development
+## Development
+
+-v1 - finsihed (template)
+
+-v1.1a - unfinished
 
 # Authors / Team
 - Lia Jung
