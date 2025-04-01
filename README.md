@@ -1,5 +1,8 @@
 # BCI-Robotics-Mechmania
-BCI Robotics Repo for Sumo and Soccer Robot
+
+<p align="center">
+  <strong> BCI Robotics Repo for MechMania </strong>
+</p>
 
 <p align="center">
   <a href="##features">Features</a> •
