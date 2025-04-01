@@ -18,8 +18,10 @@
 
 # Sumo-Bot 
   WIP
+  <a href="/Sumo-Bot">Sumo Bot</a> •
 # Soccer-Bot
   WIP
+  <a href="/Soccer-Bot">Sumo Bot</a> •
 # How-It-Works
   
 ## Development
