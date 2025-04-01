@@ -10,9 +10,8 @@
 
 <p align="center">
   <a href="##Sumo Bot">Sumo Bot</a> •
-  <a href="##Soccer Bot">Installation</a> •
+  <a href="##Soccer Bot">Soccer Bot</a> •
   <a href="#how-it-works">How It Works</a> •
-  <a href="#backend-setup">Backend Setup</a> •
   <a href="#development">Development</a> •
   <a href="#license">License</a>
 </p>
@@ -20,6 +19,8 @@
 ## Sumo Bot 
 
 ## Soccer Bot
+
+# Development
 
 # Authors / Team
 - Lia Jung
