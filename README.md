@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="##features">Features</a> •
-  <a href="#diagrams">Installation</a> •
+  <a href="##Sumo Bot">Sumo Bot</a> •
+  <a href="##Soccer Bot">Installation</a> •
   <a href="#how-it-works">How It Works</a> •
   <a href="#backend-setup">Backend Setup</a> •
   <a href="#development">Development</a> •
