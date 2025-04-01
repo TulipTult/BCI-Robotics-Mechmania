@@ -1,6 +1,15 @@
 # BCI-Robotics-Mechmania
 BCI Robotics Repo for Sumo and Soccer Robot
 
+<p align="center">
+  <a href="##features">Features</a> •
+  <a href="#diagrams">Installation</a> •
+  <a href="#how-it-works">How It Works</a> •
+  <a href="#backend-setup">Backend Setup</a> •
+  <a href="#development">Development</a> •
+  <a href="#license">License</a>
+</p>
+
 ## Sumo Bot 
 
 ## Soccer Bot
