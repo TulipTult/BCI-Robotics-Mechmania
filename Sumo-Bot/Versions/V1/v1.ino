@@ -17,6 +17,7 @@ void setup()
   Serial.begin(9600);  //Set the baud rate to Bluetooth module.
 }
 
+// THIS CAN ONLY TAKE IN ONE INPUT AT A TIME 
 void loop(){
   if(Serial.available() > 0){ 
     command = Serial.read(); 
