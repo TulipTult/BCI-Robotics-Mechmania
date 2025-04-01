@@ -6,8 +6,8 @@ BCI Robotics Repo for Sumo and Soccer Robot
 # Soccer Bot
 
 # Authors / Team
-Lia Jung
-Chitumi
+- Lia Jung
+- Chitumi
 Mahir
 [Ashton Grant](https://github.com/TulipTult)
 Hasaan Malik
