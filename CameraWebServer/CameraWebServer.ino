@@ -81,8 +81,8 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char *ssid = "";
-const char *password = "";
+const char *ssid = "HONOR 60 Pro";
+const char *password = "e27iscoolig";
 
 void startCameraServer();
 void setupLedFlash(int pin);
@@ -201,7 +201,11 @@ void setup() {
   Serial.begin(115200);
   Serial.setDebugOutput(true);
   Serial.println();
-  
+  if (psramFound()) {
+    Serial.println("PSRAM found and working!");
+  } else {
+    Serial.println("PSRAM NOT found!");
+  }
   // Initialize motor control
   setupMotors();
   
