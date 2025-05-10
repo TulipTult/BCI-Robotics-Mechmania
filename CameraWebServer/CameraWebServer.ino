@@ -81,7 +81,7 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char *ssid = "HONOR 60 Pro";
+const char *ssid = "Phantom";
 const char *password = "e27iscoolig";
 
 void startCameraServer();
