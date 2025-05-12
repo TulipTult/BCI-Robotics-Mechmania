@@ -102,52 +102,52 @@ void setupMotors() {
   digitalWrite(MOTOR2_L_EN, HIGH);
   
   // Configure PWM for motor control
-  ledcAttach(MOTOR1_RPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
-  ledcAttach(MOTOR1_LPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
-  ledcAttach(MOTOR2_RPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
-  ledcAttach(MOTOR2_LPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
+  ledcAttachChannel(MOTOR1_RPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR1_RPWM_CHANNEL);
+  ledcAttachChannel(MOTOR1_LPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR1_LPWM_CHANNEL);
+  ledcAttachChannel(MOTOR2_RPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR2_RPWM_CHANNEL);
+  ledcAttachChannel(MOTOR2_LPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR2_LPWM_CHANNEL);
   
   // Initially stop all motors
   stopMotors();
 }
 
 void stopMotors() {
-  ledcWrite(MOTOR1_RPWM_CHANNEL, 0);
-  ledcWrite(MOTOR1_LPWM_CHANNEL, 0);
-  ledcWrite(MOTOR2_RPWM_CHANNEL, 0);
-  ledcWrite(MOTOR2_LPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR1_RPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR1_LPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR2_RPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR2_LPWM_CHANNEL, 0);
 }
 
 void turnLeft() {
   // Left motor backward, right motor forward
-  ledcWrite(MOTOR1_RPWM_CHANNEL, 0);
-  ledcWrite(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
-  ledcWrite(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
-  ledcWrite(MOTOR2_LPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR1_RPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR2_LPWM_CHANNEL, 0);
 }
 
 void turnRight() {
   // Left motor forward, right motor backward
-  ledcWrite(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
-  ledcWrite(MOTOR1_LPWM_CHANNEL, 0);
-  ledcWrite(MOTOR2_RPWM_CHANNEL, 0);
-  ledcWrite(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR1_LPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR2_RPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
 }
 
 void moveForward() {
   // Both motors forward
-  ledcWrite(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
-  ledcWrite(MOTOR1_LPWM_CHANNEL, 0);
-  ledcWrite(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
-  ledcWrite(MOTOR2_LPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR1_LPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR2_LPWM_CHANNEL, 0);
 }
 
 void moveBackward() {
   // Both motors backward
-  ledcWrite(MOTOR1_RPWM_CHANNEL, 0);
-  ledcWrite(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
-  ledcWrite(MOTOR2_RPWM_CHANNEL, 0);
-  ledcWrite(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR1_RPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
+  ledcWriteChannel(MOTOR2_RPWM_CHANNEL, 0);
+  ledcWriteChannel(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
 }
 
 // API endpoint handler to control the robot
