@@ -1,1 +1,3 @@
-
+When we're going forward, one motor goes forward and the other goes backwards
+when we're going backwards, one motor goes backward the other goes forwards.
+when we turn, both motors go the same direction

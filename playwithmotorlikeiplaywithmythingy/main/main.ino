@@ -12,6 +12,13 @@
 // - L_EN --> GPIO 33
 // - VCC --> 5V
 // - GND --> GND
+// Motor Driver 2
+// - RPWM --> GPIO 27
+// - LPWM --> GPIO 14
+// - R_EN --> GPIO 12
+// - L_EN --> GPIO 13
+// - VCC --> 5V
+// - GND --> GND
 
 // Motor control pins definitions
 #define MOTOR1_RPWM 25
@@ -47,55 +54,55 @@ void setupMotors() {
     digitalWrite(MOTOR2_R_EN, HIGH);
     digitalWrite(MOTOR2_L_EN, HIGH);
     
-    // Configure PWM for motor control
-    ledcAttach(MOTOR1_RPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
-    ledcAttach(MOTOR1_LPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
-    ledcAttach(MOTOR2_RPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
-    ledcAttach(MOTOR2_LPWM_CHANNEL, MOTOR_FREQ, MOTOR_RESOLUTION);
+    // Configure PWM for motor control using correct API
+    ledcAttachChannel(MOTOR1_RPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR1_RPWM_CHANNEL);
+    ledcAttachChannel(MOTOR1_LPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR1_LPWM_CHANNEL);
+    ledcAttachChannel(MOTOR2_RPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR2_RPWM_CHANNEL);
+    ledcAttachChannel(MOTOR2_LPWM, MOTOR_FREQ, MOTOR_RESOLUTION, MOTOR2_LPWM_CHANNEL);
     
     // Initially stop all motors
     stopMotors();
-  }
-  void stopMotors() {
-    ledcWrite(MOTOR1_RPWM_CHANNEL, 0);
-    ledcWrite(MOTOR1_LPWM_CHANNEL, 0);
-    ledcWrite(MOTOR2_RPWM_CHANNEL, 0);
-    ledcWrite(MOTOR2_LPWM_CHANNEL, 0);
-  }
-  
-  void turnLeft() {
-    // Left motor backward, right motor forward
-    ledcWrite(MOTOR1_RPWM_CHANNEL, 0);
-    ledcWrite(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
-    ledcWrite(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
-    ledcWrite(MOTOR2_LPWM_CHANNEL, 0);
-  }
-  
-  void turnRight() {
-    // Left motor forward, right motor backward
-    ledcWrite(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
-    ledcWrite(MOTOR1_LPWM_CHANNEL, 0);
-    ledcWrite(MOTOR2_RPWM_CHANNEL, 0);
-    ledcWrite(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
-  }
-  
-  void moveForward() {
-    // Both motors forward
-    ledcWrite(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
-    delay(200);
-    ledcWrite(MOTOR1_LPWM_CHANNEL, 0);
-    ledcWrite(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
-    ledcWrite(MOTOR2_LPWM_CHANNEL, 0);
-  }
-  
-  void moveBackward() {
-    // Both motors backward
-    ledcWrite(MOTOR1_RPWM_CHANNEL, 0);
-    ledcWrite(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
-    ledcWrite(MOTOR2_RPWM_CHANNEL, 0);
-    ledcWrite(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
-  }
+}
 
+void stopMotors() {
+    ledcWriteChannel(MOTOR1_RPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR1_LPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR2_RPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR2_LPWM_CHANNEL, 0);
+}
+  
+void turnLeft() {
+    // Left motor backward, right motor forward
+    ledcWriteChannel(MOTOR1_RPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
+    ledcWriteChannel(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
+    ledcWriteChannel(MOTOR2_LPWM_CHANNEL, 0);
+}
+  
+void turnRight() {
+    // Left motor forward, right motor backward
+    ledcWriteChannel(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
+    ledcWriteChannel(MOTOR1_LPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR2_RPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
+}
+  
+void moveForward() {
+    // Both motors forward
+    ledcWriteChannel(MOTOR1_RPWM_CHANNEL, MOTOR_SPEED);
+    delay(200);
+    ledcWriteChannel(MOTOR1_LPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR2_RPWM_CHANNEL, MOTOR_SPEED);
+    ledcWriteChannel(MOTOR2_LPWM_CHANNEL, 0);
+}
+  
+void moveBackward() {
+    // Both motors backward
+    ledcWriteChannel(MOTOR1_RPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR1_LPWM_CHANNEL, MOTOR_SPEED);
+    ledcWriteChannel(MOTOR2_RPWM_CHANNEL, 0);
+    ledcWriteChannel(MOTOR2_LPWM_CHANNEL, MOTOR_SPEED);
+}
 
 void setup() {
     setupMotors();

@@ -155,7 +155,6 @@ def main():
         if not ret:
             print("Failed to read frame")
             break
-            
         # Process the frame for object tracking
         processed_frame, mask = tracker.process_frame(frame)
         
